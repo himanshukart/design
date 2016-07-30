@@ -1,0 +1,38 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+#grad {
+  background: #061539; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg, #061539, #7887AB); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, #061539, #7887AB); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, #061539, #7887AB); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, #061539, #7887AB); /* Standard syntax (must be last) */
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.wrapper {
+    margin-top: 40vh;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #2aabd2;
+}
+
+.linkers {
+    color: #ffffff;
+}
+
+a:hover {
+    background-color: #ffffff;
+    color: #2e6da4;
+}
+
+
+

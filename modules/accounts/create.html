@@ -1,0 +1,425 @@
+<div class="container-fluid container-fixed-lg m-t-50">
+    
+    <ul class="nav nav-tabs nav-tabs-linetriangle nav-tabs-separator nav-stack-sm">
+        <li ng-class="{'active': getCurrentStep() == 1 }">
+            <a data-toggle="tab" ng-click="goToStep(1)">
+                <i class="fa fa-shopping-cart tab-icon"></i> 
+                <span>Organisation Basics</span>
+            </a>
+        </li>
+        <li ng-class="{'active': getCurrentStep() == 2 }">
+            <a data-toggle="tab" ng-click="goToStep(2)">
+                <i class="fa fa-truck tab-icon"></i> 
+                <span>Admin Details</span>
+            </a>
+        </li>
+        <li ng-class="{'active': getCurrentStep() == 3 }">
+            <a data-toggle="tab" ng-click="goToStep(3)">
+                <i class="fa fa-credit-card tab-icon"></i> 
+                <span>CSM Details</span>
+            </a>
+        </li>
+        <li ng-class="{'active': getCurrentStep() == 4 }">
+            <a data-toggle="tab" ng-click="goToStep(4)">
+                <i class="fa fa-check tab-icon"></i> 
+                <span>Billing</span>
+            </a>
+        </li>
+    </ul>
+
+
+    <wizard on-finish="finished()" class="bg-white" hide-indicators="true">
+        
+        <wz-step title="Your cart">
+            
+            <div class="row row-same-height">
+                
+                <div class="col-md-5 b-r b-dashed b-grey sm-b-b">
+                    <div class="padding-30 m-t-50">
+                        <i class="fa fa-shopping-cart fa-2x hint-text"></i>
+                        <h2>Your </h2>
+                        <p>Discover or open your own store for free!</p>
+                        <p class="small hint-text">Below is entes</p>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-7">
+                    <div class="padding-30">
+                        
+                        <form role="form">
+                            <p>Organisation Info</p>
+                            <div class="form-group-attached">
+                                <div class="row clearfix">
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default required">
+                                            <label>Organisation Name</label>
+                                            <input type="text" ng-model="orgname" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default">
+                                            <label>Organisation Logo</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<div pg-form-group class="form-group form-group-default required">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" required>
+                                </div>-->
+                            </div>
+                            <br>
+                            <p>Organisation Address</p>
+                            <div class="form-group-attached">
+                                <div pg-form-group class="form-group form-group-default required">
+                                    <label>Address</label>
+                                    <input type="text" class="form-control" placeholder="Current address" required>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default required">
+                                            <label>Country</label>
+                                            <input type="text" class="form-control" placeholder="india" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default">
+                                            <label>City</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-sm-9">
+                                        <div pg-form-group class="form-group form-group-default required">
+                                            <label>State/Province</label>
+                                            <input type="text" class="form-control" placeholder="Outside US/Canada" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div pg-form-group class="form-group form-group-default">
+                                            <label>Zip code</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<div pg-form-group class="form-group form-group-default input-group">
+                                    <span class="input-group-addon">
+                                            <select class="cs-select cs-skin-slide cs-transparent" cs-select>
+                                            <option data-countryCode="YE" value="969">Yemen (North)(+969)</option>
+                                            <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
+                                            <option data-countryCode="ZM" value="260">Zambia (+260)</option>
+                                            <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
+                                        </select>
+                                        </span>
+                                    <label>Phone number</label>
+                                    <input type="text" class="form-control" placeholder="For verification purpose">
+                                </div>-->
+                            </div>
+                        </form>
+                       
+                        
+                        
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="padding-20 bg-white">
+                <ul class="pager wizard">
+                    <li class="next">
+                        <button type="button" class="btn btn-primary btn-cons btn-animated from-left fa fa-truck pull-right" wz-next>
+                            <span>Next</span>
+                        </button>
+                    </li>
+                    <li class="previous disabled">
+                        <button type="button" class="btn btn-default btn-cons pull-right">
+                            <span>Previous</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+
+        </wz-step>
+        
+        <wz-step title="Shipping information">
+
+            <div class="row row-same-height">
+                
+                <div class="col-md-5 b-r b-dashed b-grey ">
+                    <div class="padding-30 m-t-50">
+                        <h2>Your Information is safe with us!</h2>
+                        <p>encourage all our customers to use.</p>
+                        <p class="small hint-text">esign UI Elementes</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-7">
+                    <div class="padding-30">
+                       
+
+                        <form role="form">
+                            <p>Admin Details</p>
+                            <div class="form-group-attached">
+                                <div class="row clearfix">
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default required">
+                                            <label>Admin Name</label>
+                                            <input type="text" ng-model="orgname" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default">
+                                            <label>Admin Email</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div pg-form-group class="form-group form-group-default required">
+                                    <label>Admin Mobile</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <br>
+                            <p>CSV Upload</p>
+                            <div class="form-group-attached">
+                                <div pg-form-group class="form-group form-group-default required">
+                                    <label>Address</label>
+                                    <input type="text" class="form-control" placeholder="Current address" required>
+                                </div>
+                                
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="padding-20 bg-white">
+                <ul class="pager wizard">
+                    <li class="next">
+                        <button type="button" class="btn btn-primary btn-cons btn-animated from-left fa fa-truck pull-right" wz-next>
+                            <span>Next</span>
+                        </button>
+                    </li>
+                    <li class="previous">
+                        <button type="button" class="btn btn-default btn-cons pull-right" wz-previous>
+                            <span>Previous</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </wz-step>
+        <wz-step title="Payment Details">
+            <div class="row row-same-height">
+                <div class="col-md-5 b-r b-dashed b-grey ">
+                    <div class="padding-30 m-t-50">
+                        <h2>CSM User Details</h2>
+                        <p>Below is a sample page for your car</p>
+                        <p class="small hint-text">Below is a Elementes</p>
+                       
+                        <p class="small">adasdasdasd </p>
+                        
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="padding-30">
+                        
+                        <form role="form">
+                            <p>CSM Details</p>
+                            <div class="form-group-attached">
+                                <div class="row clearfix">
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default required">
+                                            <label>CSM Name</label>
+                                            <input type="text" ng-model="orgname" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default">
+                                            <label>CSM Email</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div pg-form-group class="form-group form-group-default required">
+                                    <label>CSM Mobile</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <br>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="padding-20 bg-white">
+                <ul class="pager wizard">
+                    <li class="next">
+                        <button type="button" class="btn btn-primary btn-cons btn-animated from-left fa fa-truck pull-right" wz-next>
+                            <span>Next</span>
+                        </button>
+                    </li>
+                    <li class="previous">
+                        <button type="button" class="btn btn-default btn-cons pull-right" wz-previous>
+                            <span>Previous</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </wz-step>
+        <wz-step title="Summary">
+
+            <div class="padding-30">
+                <!--<h1 class="text-center">Thank you.</h1>-->
+                <p>Billing Address</p>
+                <div class="form-group-attached">
+                    <div pg-form-group class="form-group form-group-default required">
+                        <label>Address</label>
+                        <input type="text" class="form-control" placeholder="Current address" required>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-sm-6">
+                            <div pg-form-group class="form-group form-group-default required">
+                                <label>Country</label>
+                                <input type="text" class="form-control" placeholder="india" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div pg-form-group class="form-group form-group-default">
+                                <label>City</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-sm-9">
+                            <div pg-form-group class="form-group form-group-default required">
+                                <label>State/Province</label>
+                                <input type="text" class="form-control" placeholder="Outside US/Canada" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div pg-form-group class="form-group form-group-default">
+                                <label>Zip code</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                                
+                </div>
+
+                <br>
+                <p>Billing Details</p>
+                <div class="form-group-attached">
+                    
+                    <div class="row clearfix">
+                        <div class="col-sm-6">
+                            <div pg-form-group class="form-group form-group-default required">
+                                <label>Employee Size</label>
+                                <input type="text" class="form-control" placeholder="india" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div pg-form-group class="form-group form-group-default">
+                                <label>Minimum Comitment</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row clearfix">
+                        <div class="col-sm-6">
+                            <div pg-form-group class="form-group form-group-default required">
+                                <label>Cost Per User</label>
+                                <input type="text" class="form-control" placeholder="india" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div pg-form-group class="form-group form-group-default">
+                                <label>Contract Period</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                 <br>
+                <p>Packages</p>
+                <div class="form-group-attached">
+                    
+                    <div class="row clearfix">
+                        <div class="col-sm-6">
+                            <div pg-form-group class="form-group form-group-default required">
+                                <label>Chat</label>
+                                <input type="checkbox" class="form-control" placeholder="india" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div pg-form-group class="form-group form-group-default">
+                                <label>Learning Forum</label>
+                                <input type="checkbox" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row clearfix">
+                        <div class="col-sm-6">
+                            <div pg-form-group class="form-group form-group-default required">
+                                <label>Social Listening</label>
+                                <input type="checkbox" class="form-control" placeholder="india" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div pg-form-group class="form-group form-group-default">
+                                <label>URL Shortner</label>
+                                <input type="checkbox" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row clearfix">
+                        <div class="col-sm-6">
+                            <div pg-form-group class="form-group form-group-default required">
+                                <label>Competative Analysis</label>
+                                <input type="checkbox" class="form-control" placeholder="india" required>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+            <div class="padding-20 bg-white">
+                <ul class="pager wizard">
+                    <li class="next">
+                        <button type="button" class="btn btn-primary btn-cons btn-animated from-left fa fa-truck pull-right" ng-click="finish()" wz-finish>
+                            <span>Finish</span>
+                        </button>
+                    </li>
+                    <li class="previous">
+                        <button type="button" class="btn btn-default btn-cons pull-right" wz-previous>
+                            <span>Previous</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </wz-step>
+    </wizard>
+    <!--<div class="wizard-footer padding-20 bg-master-light">
+        <p class="small hint-text pull-left no-margin">
+            The Top Content Is Soley Created using pages UI Elements such as Invoice, Tabs, Form Layouts etc. and are prior for representation Purpose Only.
+        </p>
+        <div class="pull-right">
+            <img width="78" height="22" ui-jq="unveil" data-src-retina="assets/img/logo_2x.png" data-src="assets/img/logo.png" alt="logo" src="assets/img/logo_2x.png">
+        </div>
+        <div class="clearfix"></div>
+    </div>-->
+</div>

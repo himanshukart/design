@@ -3,13 +3,18 @@ engageApp.controller('loginController',['$scope','$http','$location','userFactor
   $scope.data = {};
   $scope.data.email = 'prince@eleve.co.in';
   $scope.data.password = 'secretPassword';
-  userFactory.userLogin($scope.data)
-      .then(function onSuccess(response) {
+   if(loginServices.is_logged()){
+     $location.path('hub');
+  }
+  else{
+    userFactory.userLogin($scope.data)
+        .then(function onSuccess(response) {
 
-      })
-      .catch(function onError(sailsresponse) {
-        console.log(sailsresponse);
-      })
-      .finally(function eitherWay(){
-      })
+        })
+        .catch(function onError(sailsresponse) {
+          console.log(sailsresponse);
+        })
+        .finally(function eitherWay(){
+        })
+  }
 }]);

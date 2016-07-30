@@ -10,8 +10,10 @@ engageApp.factory('userFactory', function($http, $location,cookieService) {
       //function for logging in user
       userLogin: function(data){
           console.log(data);
-          var $promise = $http.post('/login',data);
+          cookieService.setObj('email',data);
+          var $promise = $http.get('http://arnab.arnabmakur.me/api/sa/login/',data);
           $promise.then(function onSuccess(response){
+            console.log(response);
           })
           .catch(function onError(err){
             console.log(err);

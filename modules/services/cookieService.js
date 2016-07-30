@@ -7,9 +7,15 @@ engageApp.factory('cookieService', ['$http','$cookies', function($http,$cookies)
 		set:function(key,value){
 			return $cookies.put(key,value);
 		},
+		setObj:function(key,value){
+			return $cookies.putObject(key,value);
+		},
     //to get value from cookies
 		get:function(key){
 			return $cookies.get(key);
+		},
+		getObj:function(key){
+			return $cookies.getObject(key);
 		},
     //destroy cookies
 		destroy:function(key){

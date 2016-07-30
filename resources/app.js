@@ -3,6 +3,7 @@ var engageApp = angular.module('engageApp',['ngRoute','ngCookies','ui.bootstrap'
 
 
 engageApp.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
+
     $routeProvider.
       when('/',{
           templateUrl: 'modules/login/login.html',

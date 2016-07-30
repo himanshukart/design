@@ -1,6 +1,7 @@
-engageApp.controller('loginController',['$scope','$http','$location','userFactory', function($scope,$http,$location,userFactory) {
+engageApp.controller('loginController',['$scope','$http','$location','userFactory','loginServices', function($scope,$http,$location,userFactory,loginServices) {
 
   $scope.data = 'test';
+  console.log(loginServices.is_logged());
   userFactory.userLogin($scope.data)
       .then(function onSuccess(response) {
 

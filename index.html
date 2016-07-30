@@ -1,6 +1,7 @@
 <!DOCTYPE html>
   <html ng-app="engageApp">
     <head>
+      <base href="/eleve/">
       <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
       <meta charset="utf-8" />
       <title>Admin Login</title>
@@ -20,9 +21,9 @@
       <link href="resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
       <link href="resources/css/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
       <link href="resources/css/pages-icons.css" rel="stylesheet" type="text/css">
-      <link href="resources/css/gallery.css" rel="stylesheet" type="text/css">
+      <!-- <link href="resources/css/gallery.css" rel="stylesheet" type="text/css"> -->
       <link href="resources/css/pages.css" class="main-stylesheet" rel="stylesheet" type="text/css" />
-      <link href="resources/css/MetroJs.min.css" class="main-stylesheet" rel="stylesheet" type="text/css" />
+      <!-- <link href="resources/css/MetroJs.min.css" class="main-stylesheet" rel="stylesheet" type="text/css" /> -->
       <!-- stylesheets -->
     <!--<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/angular.wizard/latest/angular-wizard.min.css">-->
       <script type="text/javascript">
@@ -68,7 +69,7 @@
           <!-- menu items -->
           <ul class="menu-items">
             <li class="m-t-30 ">
-              <a href="#/hub" class="detailed">
+              <a href="hub" class="detailed">
                 <span class="title">Connect Hub</span>
               </a>
               <span class="bg-success icon-thumbnail">
@@ -77,7 +78,7 @@
             </li>
 
             <li class="">
-              <a href="#/groups">
+              <a href="groups">
                 <span class="title">Groups</span>
               </a>
               <span class="icon-thumbnail">
@@ -86,7 +87,7 @@
             </li>
 
             <li>
-              <a href="#/calender">
+              <a href="calender">
                 <span class="title">Calendar</span>
               </a>
               <span class="icon-thumbnail">
@@ -95,7 +96,7 @@
             </li>
 
             <li>
-              <a href="#/gallery">
+              <a href="gallery">
                 <span class="title">Gallery</span>
               </a>
               <span class="icon-thumbnail">
@@ -104,7 +105,7 @@
             </li>
 
             <li>
-              <a href="#/forum">
+              <a href="forum">
                 <span class="title">Forum</span>
               </a>
               <span class="icon-thumbnail">
@@ -113,7 +114,7 @@
             </li>
 
             <li class="">
-              <a href="#/report">
+              <a href="report">
                 <span class="title">Report</span>
               </a>
               <span class="icon-thumbnail">
@@ -390,25 +391,27 @@
     <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="resources/js/jquery.scrollbar.min.js"></script>
     <script src="resources/js/pages.min.js"></script>
-    <script src="resources/js/scripts.js" type="text/javascript"></script>
+    <!-- <script src="resources/js/scripts.js" type="text/javascript"></script> -->
     <!-- END VENDOR JS -->
 
     <!-- angular -->
     <script src="resources/js/angular.min.js"></script>
     <script src="resources/js/angular-route.min.js"></script>
-    <script src="resources/js/angular-animate.js"></script>
+    <!-- <script src="resources/js/angular-animate.js"></script> -->
     <script src="resources/js/ui-bootstrap-tpls-1.3.3.js"></script>
     <script src="resources/js/angular-cookies.min.js"></script>
-    <script src="resources/js/ui-utils.min.js"></script>
-    <script src="resources/js/angular-sanitize.min.js"></script>
-    <script src="resources/js/MetroJs.min.js"></script>
-    <script src="resources/js/gallery.js"></script>
+    <!-- <script src="resources/js/angular-sanitize.min.js"></script> -->
+    <!-- <script src="resources/js/MetroJs.min.js"></script> -->
+    <!-- <script src="resources/js/gallery.js"></script> -->
 
     <!--<script type="text/javascript" src="http://cdn.jsdelivr.net/angular.wizard/latest/angular-wizard.min.js"></script>-->
     <!-- angualar -->
 
     <!-- app modules -->
     <script src="resources/app.js"></script>
+    <script src="modules/services/cookieService.js"></script>
+    <script src="modules/services/loginServices.js"></script>
+    <script src="modules/factories/userFactory.js"></script>
     <script src="modules/controllers/loginController.js"></script>
     <script src="modules/controllers/globalController.js"></script>
 

@@ -37,5 +37,5 @@ engageApp.config(['$routeProvider','$locationProvider', function($routeProvider,
         });
 
         // use the HTML5 History API
-        $locationProvider.html5Mode(true).hashPrefix('!');
+        //$locationProvider.html5Mode(true).hashPrefix('!');
 }]);

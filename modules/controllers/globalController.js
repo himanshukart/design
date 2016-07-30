@@ -1,8 +1,13 @@
 "use strict";
-engageApp.controller('globalController',['$scope','$rootScope','$cookieStore','$location', function($scope,$rootScope,$cookieStore,$location) {
+engageApp.controller('globalController',['$scope','$rootScope','loginServices','$location', function($scope,$rootScope,loginServices,$location) {
   console.log("Inside global controller");
   // Set this variable true in corresponding controller to display the sidebar.
-  $rootScope.isLoginPage = true;
+  if(loginServices.is_logged()){
+    $rootScope.isLoginPage = true;
+  }
+  else{
+    $rootScope.isLoginPage = false;
+  }
   $(document).mouseover(function(e){
 
     // Check if click was triggered on or within #menu_content
@@ -10,10 +15,7 @@ engageApp.controller('globalController',['$scope','$rootScope','$cookieStore','$
         return false;
     }
     else{
-      $('.page-sidebar').removeAttr('style');
+      $(".page-sidebar").removeAttr('style');
     }
-    // Otherwise
-    // trigger your click function
-});
-
+  });
 }]);

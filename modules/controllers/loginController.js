@@ -3,10 +3,6 @@ engageApp.controller('loginController',['$scope','$http','$location','userFactor
   $scope.data = {};
   $scope.data.email = 'prince@eleve.co.in';
   $scope.data.password = 'secretPassword';
-
-//  console.log(loginServices.is_logged());
-  $scope.val = cookieService.getObj('email');
-  console.log($scope.val.password);
   userFactory.userLogin($scope.data)
       .then(function onSuccess(response) {
 

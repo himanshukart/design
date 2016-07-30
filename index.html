@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <html ng-app="engageApp">
     <head>
-      <base href="/eleve/">
+      <!-- <base href="/eleve/"> -->
       <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
       <meta charset="utf-8" />
       <title>Admin Login</title>
@@ -37,7 +37,7 @@
     </head>
     <body class="fixed-header" ng-controller="globalController">
       <!--sidebar-->
-      <nav class="page-sidebar" data-pages="sidebar" ng-if="isLoginPage">
+      <nav class="page-sidebar" data-pages="sidebar" ng-show="isLoginPage">
 
         <div class="sidebar-overlay-slide from-top" id="appMenu">
           <div class="row">

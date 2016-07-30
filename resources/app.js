@@ -1,8 +1,8 @@
-var engageApp = angular.module('engageApp',['ngRoute','ngAnimate','ngCookies','ui.bootstrap']);
+var engageApp = angular.module('engageApp',['ngRoute','ngCookies','ui.bootstrap']);
 //var engageApp = angular.module('engageApp',['ngRoute','ngAnimate','ngCookies','ui.bootstrap','mgo-angular-wizard']);
 
 
-engageApp.config(['$routeProvider', function($routeProvider) {
+engageApp.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
     $routeProvider.
       when('/',{
           templateUrl: 'modules/login/login.html',
@@ -35,4 +35,7 @@ engageApp.config(['$routeProvider', function($routeProvider) {
       otherwise({
 		      redirectTo: '/404'
         });
+
+        // use the HTML5 History API
+        $locationProvider.html5Mode(true)
 }]);

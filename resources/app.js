@@ -31,7 +31,7 @@ engageApp.config(['$routeProvider','$locationProvider', function($routeProvider,
         }).
       when('/report', {
           templateUrl: 'modules/accounts/report.html',
-          controller: 'loginController'
+          controller: 'reportController'
         }).
       otherwise({
 		      redirectTo: '/404'

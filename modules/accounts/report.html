@@ -1,11 +1,250 @@
+<style>
+  .canvas-height {
+    height: 300px;
+  }
+  .canvas-width {
+    width: 290px;
+  }
+  .marginTop-50 {
+    margin-top: 50px;
+  }
+  select {
+    background-color: #cdbfe3 !important;
+  }
+</style>
 <div class="container-fluid container-fixed-lg ">
   <ul class="breadcrumb">
     <li>
-      <a href="#">Hub</a>
+      <a href="#/hub">Hub</a>
     </li>
     <li>
       <a class="active" href="#">Report</a>
     </li>
   </ul>
   <h3 class="page-title">Report</h3>
+    <div class="row">
+      <div class="text-center col-md-6 col-sm-6 col-xs-12 canvas-height canvas-width">
+      <canvas id="pieChartCanvas1" width="256" height="256">
+      </div>
+      <div class="col-md-6 text-center col-sm-6 col-xs-12 canvas-height canvas-width">
+        <canvas id="pieChartCanvas2" width="256" height="256">
+      </div>
+      <div class="col-md-6 text-center col-sm-6 col-xs-12 canvas-height canvas-width">
+        <canvas id="pieChartCanvas3" width="256" height="256">
+      </div>
+      <div class="col-md-6 text-center col-sm-6 col-xs-12 canvas-height canvas-width">
+      <canvas id="pieChartCanvas4" width="256" height="256">
+      </div>
+  </div>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Number of Posts</th>
+      <th>Number of Shares</th>
+      <th>NUmber of Likes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>12</td>
+      <td>45</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>45</td>
+      <td>56</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>9</td>
+      <td>87</td>
+      <td>98</td>
+    </tr>
+  </tbody>
+</table>
+  <div class="col-md-6 text-center col-sm-6 col-xs-10 col-xs-offset-1 col-md-offset-3">
+      <canvas id="lineChart1" width="300" height="300"></canvas>
+  </div>
+  <div class="col-md-6 text-center col-sm-6 col-xs-10 col-xs-offset-1 col-md-offset-3 marginTop-50">
+      <canvas id="MultipleLineChart1" width="300" height="300"></canvas>
+  </div>
+  <div class="col-md-6 text-center col-sm-6 col-xs-10 col-xs-offset-1 col-md-offset-3 marginTop-50">
+    <div class="form-group col-md-3 pull-right">
+      <label for="sel1">Select list:</label>
+      <select name="selectGraph" data-ng-options="o.name for o in options" data-ng-model="selectedOption">
+      </select>
+    </div>
+    <div ng-show="selectedOption.id == 1">
+      <canvas id="lineChart2" width="300" height="300"></canvas>
+    </div>
+    <div ng-show="selectedOption.id == 2">
+      <canvas id="lineChart3" width="300" height="300"></canvas>
+    </div>
+    <div ng-show="selectedOption.id == 3">
+      <canvas id="lineChart4" width="300" height="300"></canvas>
+    </div>
+  </div>
+    <div class="col-md-5 text-center col-sm-6 col-xs-10 col-xs-offset-1 col-md-offset-1 marginTop-50">
+      <table class="table table-hover" style="width: 50%;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Parameter</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Posts</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Reach</td>
+            <td>67</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Impressions</td>
+            <td>87</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Engagement</td>
+            <td>54</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Sentiment</td>
+            <td>Positive</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-5 text-center col-sm-6 col-xs-10 col-xs-offset-1 col-md-offset-1 marginTop-50">
+    <table class="table table-hover" style="width: 50%; display: inline;">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Parameter</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Posts</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Reach</td>
+          <td>67</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Impressions</td>
+          <td>87</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Engagement</td>
+          <td>54</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Sentiment</td>
+          <td>Positive</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><br>
+  <div class="col-md-5 text-center col-sm-6 col-xs-10 col-xs-offset-1 col-md-offset-1 marginTop-50">
+    <table class="table table-hover" style="width: 50%;">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Parameter</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Posts</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Reach</td>
+          <td>67</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Impressions</td>
+          <td>87</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Engagement</td>
+          <td>54</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Sentiment</td>
+          <td>Positive</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-5 text-center col-sm-6 col-xs-10 col-xs-offset-1 col-md-offset-1 marginTop-50">
+  <table class="table table-hover" style="width: 50%; display: inline;">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Parameter</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Posts</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Reach</td>
+        <td>67</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Impressions</td>
+        <td>87</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Engagement</td>
+        <td>54</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Sentiment</td>
+        <td>Positive</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+  <!-- <div class="col-md-6 text-center col-sm-6 col-xs-10 col-xs-offset-1 col-md-offset-3 marginTop-50">
+      <canvas id="MultipleLineChart1" width="300" height="300"></canvas>
+  </div> -->
+  <!-- <div>
+      <canvas id="horizontalChart" width="300" height="300"></canvas>
+  </div> -->
 </div>
